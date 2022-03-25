@@ -1,14 +1,14 @@
 import './App.css';
-import data from './single-sample';
+import Song from './components/Song';
+import data from './assets/data/single-sample';
 
 function App() {
+  const {images, title, artist, albums} = data;
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={data.album.images[1].url} className="App-logo" alt="" />
-        <h3 className="App-title">{data.name}</h3>
-        <p className="App-artist">{data.artists[0].name}</p>
-        <button>Select</button>
+        <Song data={data} />
       </header>
     </div>
   );
