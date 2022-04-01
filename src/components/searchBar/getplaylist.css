@@ -1,0 +1,21 @@
+.input_get {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 14px;
+  border: 4px dashed #ddd;
+  border-radius: 20px;
+}
+
+.input_get:focus {
+  outline: none;
+}
+
+.btn_get {
+  padding: 12px;
+  width: 100%;
+  color: #fff;
+  background-color: #0071bc;
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
