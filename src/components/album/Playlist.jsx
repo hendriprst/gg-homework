@@ -1,5 +1,5 @@
 import React from "react";
-import "./playlist.css";
+import "./styles.css";
 
 const Playlist = ({ images, title, artist, albums }) => {
   return(

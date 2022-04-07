@@ -1,0 +1,31 @@
+.login {
+  background-image: linear-gradient(to bottom right, #2A8D08, #8EBA0E);
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+
+.login > h1 {
+  color: #fff;
+  font-size: 4rem;
+}
+
+h1 > span {
+  color: #AFC90F;
+}
+
+.login > a {
+  padding: 14px;
+  background-color: #CDF2CA;
+  color: green;
+  text-decoration: none;
+  font-weight: 600;
+  width: 128px;
+  text-align: center;
+  border-radius: 99px;
+}
+
+.login > a:hover {
+  background-color: green;
+  color: #CDF2CA;
+}

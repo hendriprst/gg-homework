@@ -6,16 +6,17 @@ function CreatePlaylist() {
   return (
     <>
       <form>
-        <div>
-          <p className="form_title">Title
+        <div className="form_title">
+          <p>Title
             <span className="form_required">*</span>
           </p>
-          <input type="text" id="search" className="form_input" required />
+          <label htmlFor="search"></label>
+          <input type="text" id="search" className="form_input" inputProp={{maxLength: 10}} required />
         </div>
 
-        <div>
-          <p className="form_desc">Description</p>
-          <textarea name="desc" id="desc" className="form_desc"></textarea>
+        <div className="form_desc">
+          <p>Description</p>
+          <textarea name="desc" id="desc" className="form_text"></textarea>
         </div>
         <Button text="Create Playlist" />
       </form>

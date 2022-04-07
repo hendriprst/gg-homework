@@ -1,28 +1,27 @@
 import './App.css';
 import React, { useEffect, useState } from 'react';
-import CreatePlaylist from './components/createPlaylist/CreatePlaylist';
-import SearchBar from './components/searchBar/SearchBar';
+import { Login } from './pages/login';
+import { getTokenFromUrl } from './pages/auth'
+import Home from './pages/home';
 
 const App = () => {
-  const [ data, setData ] = useState([])
-
-  const CLIENT_ID = process.env.REACT_APP_API_KEY;
-  const url = "https://accounts.spotify.com/authorize";
-  const scope = "playlist-modify-private";
-
-  // const handleSearch = (value) => setQuery(value);
+  const [ token, setToken ] = useState(null);
 
   useEffect(() => {
-    fetch(`${url}?access_token=${CLIENT_ID}&scope=${scope}`)
-    .then((res) => setData(res.data))
-    .catch((err) => console.log(err))
-  }, []);
+    const hash = getTokenFromUrl();
+    window.location.hash = "";
+    const accessToken = hash.access_token;
+
+    if (accessToken) {
+      setToken(accessToken);
+    }
+
+    console.log(token, "Logged In");
+  }, [])
 
   return (
-    <div>
-      <CreatePlaylist />
-      <br />
-      <SearchBar />
+    <div className="app">
+      {token ? <Home /> : <Login /> }
     </div>
   );
 }

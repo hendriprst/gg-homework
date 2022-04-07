@@ -4,10 +4,10 @@ import SearchBar from '../../components/searchBar/SearchBar';
 
 const Home = () => {
   return (
-    <>
+    <div>
       <CreatePlaylist />
       <SearchBar />
-    </>
+    </div>
   )
 }
 

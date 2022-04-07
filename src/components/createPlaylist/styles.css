@@ -1,9 +1,15 @@
 form {
   text-align: center;
+  padding-top: 20px;
+  color: #fff;
+}
+
+.form_required {
+  color: red;
 }
 
 input, textarea {
-  padding: 14px;
+  padding: 8px;
   border: 2px solid #ccc;
   border-radius: 8px;
 }

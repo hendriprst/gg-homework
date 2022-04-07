@@ -2,8 +2,9 @@
   width: 30%;
   margin-right: 12px;
   padding: 8px;
-  border: 4px dashed #ddd;
+  border: 1px solid #ddd;
   border-radius: 20px;
+  box-shadow: 2px 4px 10px black;
 }
 
 .input_get:focus {

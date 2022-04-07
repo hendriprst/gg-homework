@@ -7,8 +7,9 @@ function SearchBar(props) {
   const [ query, setQuery ] = useState("bohemian");
   const [ data, setData ] = useState([]);
 
-  const handleChange = e => {
-    setSearch(e.target.value);
+  const handleChange = (e) => {
+    const setSearch = e.target.value;
+    setSearch(search);
   };
 
   const handleSubmit = e => {
@@ -27,7 +28,7 @@ function SearchBar(props) {
     <>
       <form onSubmit={handleSubmit}>
         <label htmlFor="search"></label>
-        <input onChange={handleChange} id="search" type="search" placeholder="Try 'Bohemian'" className="input_get" />
+        <input onChange={handleChange} id="search" type="search" placeholder="Search for Album, artist or playlist" className="input_get" />
         <Button text="Search" />
       </form>
     </>
