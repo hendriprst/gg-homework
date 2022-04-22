@@ -1,5 +1,3 @@
-import React from "react";
-
 export const authEndpoint = "https://accounts.spotify.com/authorize";
 const redirectUri = "http://localhost:3000/";
 const CLIENT_ID = process.env.REACT_APP_API_KEY;

@@ -1,7 +1,6 @@
-import './App.css';
 import React, { useEffect, useState } from 'react';
 import { Login } from './pages/login';
-import { getTokenFromUrl } from './pages/auth'
+import { getTokenFromUrl } from './data/auth';
 import Home from './pages/home';
 
 const App = () => {
@@ -15,14 +14,12 @@ const App = () => {
     if (accessToken) {
       setToken(accessToken);
     }
-
-    console.log(token, "Logged In");
   }, [])
 
   return (
-    <div className="app">
+    <>
       {token ? <Home /> : <Login /> }
-    </div>
+    </>
   );
 }
 
