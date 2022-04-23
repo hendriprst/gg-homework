@@ -1,5 +1,5 @@
 export const authEndpoint = "https://accounts.spotify.com/authorize";
-const redirectUri = "http://localhost:3000/";
+const redirectUri = ["https://gg-homework-seven.vercel.app/"];
 const CLIENT_ID = process.env.REACT_APP_API_KEY;
 const scopes = "playlist-modify-private";
 
